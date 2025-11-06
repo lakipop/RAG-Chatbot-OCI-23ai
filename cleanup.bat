@@ -19,10 +19,16 @@ REM
 REM After running this, you'll need to run setup.bat again.
 REM ============================================================
 
+REM Change to the directory where this batch file is located
+cd /d "%~dp0"
+
 echo.
 echo ============================================================
 echo   OCI RAG PROJECT - CLEANUP
 echo ============================================================
+echo.
+echo Working directory: %CD%
+echo.
 echo.
 echo [WARNING] This will delete:
 echo   - venv/ folder (virtual environment)

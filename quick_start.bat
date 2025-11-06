@@ -15,10 +15,15 @@ REM reloads all documents. Only use this if you want to
 REM refresh your document database.
 REM ============================================================
 
+REM Change to the directory where this batch file is located
+cd /d "%~dp0"
+
 echo.
 echo ============================================================
 echo   OCI RAG PROJECT - QUICK START
 echo ============================================================
+echo.
+echo Working directory: %CD%
 echo.
 
 REM Check if virtual environment exists

@@ -15,10 +15,15 @@ REM This process may take 30-60 seconds depending on the number
 REM of documents you have.
 REM ============================================================
 
+REM Change to the directory where this batch file is located
+cd /d "%~dp0"
+
 echo.
 echo ============================================================
 echo   OCI RAG PROJECT - DATA INGESTION
 echo ============================================================
+echo.
+echo Working directory: %CD%
 echo.
 
 REM Check if virtual environment exists

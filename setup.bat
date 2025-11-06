@@ -18,10 +18,15 @@ REM - Run run_ingestion.bat to load your documents
 REM - Run start_chatbot.bat to launch the app
 REM ============================================================
 
+REM Change to the directory where this batch file is located
+cd /d "%~dp0"
+
 echo.
 echo ============================================================
 echo   OCI RAG PROJECT - INITIAL SETUP
 echo ============================================================
+echo.
+echo Working directory: %CD%
 echo.
 
 REM Check if Python is installed
@@ -43,8 +48,13 @@ if exist "venv\" (
     echo [WARNING] Virtual environment already exists!
     echo If you want to recreate it, delete the 'venv' folder first.
     echo.
-    set /p continue="Do you want to continue anyway? (y/n): "
-    if /i not "%continue%"=="y" (
+    REM Use CHOICE for a more robust single-key prompt that works
+    REM correctly when run from various terminals (cmd.exe, PowerShell,
+    REM or when launched by other programs). CHOICE returns an errorlevel
+    REM corresponding to the key pressed (1 = first choice, 2 = second).
+    choice /c YN /m "Do you want to continue anyway? (Y/N)"
+    REM If user chose 'N' (errorlevel 2) then cancel setup
+    if errorlevel 2 (
         echo Setup cancelled.
         pause
         exit /b 0
