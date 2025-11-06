@@ -240,6 +240,14 @@ oci-rag-oracle-23ai/
 | `main_app.py` | Web UI for asking questions | Every time you want to use the chatbot |
 | `data/*.txt` | Your knowledge base documents | Add/update as needed |
 
+### Important Code Components
+
+| File | Lines | Key Features |
+|------|-------|--------------|
+| `ingest.py` | 251 | Step-by-step ingestion, chunking strategy, error handling, progress indicators |
+| `main_app.py` | 337 | Streamlit UI, caching, source citations, sidebar info, status indicators |
+| `config_loader.py` | 95 | Secure credential loading, validation, standalone testing |
+
 ---
 
 ## 🛠️ Technical Details
