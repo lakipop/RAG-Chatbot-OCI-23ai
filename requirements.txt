@@ -1,0 +1,27 @@
+# OCI SDK - Oracle Cloud Infrastructure Python SDK
+oci>=2.119.0
+
+# Environment variable management (loads .env files securely)
+python-dotenv>=1.0.0
+
+# LangChain Core - The orchestration framework for LLM applications
+langchain>=0.1.0
+langchain-core>=0.1.0
+
+# LangChain OCI Integration - Provides OCI-specific embeddings and LLMs
+langchain-oci>=0.1.0
+
+# LangChain Community - Contains integrations like Oracle Vector Store
+langchain-community>=0.0.20
+
+# Text splitters for chunking documents
+langchain-text-splitters>=0.0.1
+
+# Oracle Database Python driver (for connecting to Oracle 23ai)
+oracledb>=2.0.0
+
+# Streamlit - Simple web framework for building data apps
+streamlit>=1.30.0
+
+# Additional dependencies for stability
+typing-extensions>=4.9.0
